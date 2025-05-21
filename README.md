@@ -43,7 +43,7 @@ This repository contains an implementation of a basic feedforward neural network
 
 3. Open the notebook:
    ```bash
-   jupyter notebook HW4_5.ipynb
+   jupyter notebook Main.ipynb
    ```
 
 4. Run all cells to train and evaluate the model.
@@ -54,9 +54,7 @@ The model achieves approximately **92–94% accuracy** on the test set after tra
 
 Training and test accuracy over epochs:
 
-![Accuracy Plot](plot_placeholder.png)
-
-> *Replace with actual image after generating the plot.*
+![Accuracy Plot](plot.png)
 
 ## Notes
 
@@ -70,3 +68,48 @@ This project is intended for academic and educational use.
 ---
 
 Feel free to use or adapt this project for learning or teaching purposes. Contributions and improvements are welcome!
+
+## Sample Output Summary
+
+### ✅ XOR Network Testing
+```
+Input:
+[[0 1]
+ [1 0]
+ [1 1]]
+
+Ground Truth:
+[[1]
+ [1]
+ [0]]
+
+Predictions:
+[[1]
+ [1]
+ [0]]
+```
+
+The XOR neural network correctly predicted the binary outcomes, demonstrating successful training on a non-linearly separable problem.
+
+### 🤖 Stress Classification Test
+
+- Test set contained biometric-like features (e.g., [heart rate, skin conductance]).
+- Network produced accurate predictions on 150+ instances.
+- Ground truth and predictions matched for nearly all entries, showing the model generalizes well.
+
+### 🔁 Training Snapshot
+```
+Forward Propagation Output (y): [[0.83056853]]
+Epoch 0, Train Loss: 0.0287
+Validation Loss: 1.80e-08
+```
+
+### ✏️ Manual Parameter Updates (Verification)
+
+Weights `H2` and bias `B2` were manually updated and verified post-backpropagation:
+```
+H2: [[1.85946238], [1.15647869], [0.85946238], [1.65647869]]
+B2: [[1.05100347]]
+```
+
+These match the network-updated values, validating correctness of the backprop implementation.
