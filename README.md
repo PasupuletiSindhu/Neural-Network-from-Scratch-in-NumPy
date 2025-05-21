@@ -54,7 +54,7 @@ The model achieves approximately **92–94% accuracy** on the test set after tra
 
 Training and test accuracy over epochs:
 
-![Accuracy Plot](plot.png)
+Look at plot.png and plot1.png
 
 ## Notes
 
